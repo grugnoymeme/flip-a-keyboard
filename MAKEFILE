@@ -1,0 +1,18 @@
+PROJECT_NAME = Flip-A-Keyboard
+SRC_DIR = src
+BUILD_DIR = build
+
+CFLAGS = -I$(SRC_DIR)/include
+
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC_FILES))
+
+$(BUILD_DIR)/$(PROJECT_NAME).elf: $(OBJ_FILES)
+    $(CC) $(CFLAGS) -o $@ $^
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+    mkdir -p $(BUILD_DIR)
+    $(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+    rm -rf $(BUILD_DIR)
