@@ -3,4 +3,5 @@
 
 void start_bluetooth_monitoring();
 
-#endif
+#endif // BLUETOOTH_MONITOR_H
+
