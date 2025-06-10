@@ -3,4 +3,4 @@
 
 void app_menu_init();
 
-#endif
+#endif // APP_MENU_H
