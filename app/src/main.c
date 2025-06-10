@@ -1,7 +1,6 @@
 #include <furi.h>
 #include <furi_hal.h>
-#include <gui/gui.h>
-#include "app_menu.h"
+#include "faica.h"
 
 int main() {
     app_menu_init();
