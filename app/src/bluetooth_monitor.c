@@ -10,8 +10,10 @@ void start_bluetooth_monitoring() {
     ble_device_t* keyboard = ble_find_device_by_type(HID_KEYBOARD_TYPE);
     if (!keyboard) {
         furi_log("No BLE keyboard found.");
+        FuriHalBle.deinit();
         return;
     }
+
 
     ble_connect_device(keyboard);
 
