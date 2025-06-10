@@ -1,12 +1,15 @@
+#include <furi.h>
 #include <storage/storage.h>
 
 void save_keystroke_to_storage(char character) {
     Storage* storage = furi_record_open(RECORD_STORAGE);
     File* file = storage_file_open(storage, "/ext/keystrokes.txt", FSAM_WRITE, FSOM_APPEND);
-    if (file) {
+    if(file) {
         storage_file_write(file, &character, sizeof(character));
-        storage_file_write(file, "\n", 1); // Add newline after each character
+        storage_file_write(file, "\n", 1);
         storage_file_close(file);
+    } else {
+        furi_log("ERROR opening keystrokes.txt");
     }
     furi_record_close(RECORD_STORAGE);
 }
