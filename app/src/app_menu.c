@@ -1,8 +1,9 @@
 #include <furi.h>
 #include <gui/gui.h>
+#include <gui/modules/submenu.h>
+#include "app_menu.h"
 #include "bluetooth_monitor.h"
 #include "usb_monitor.h"
-#include <gui/modules/submenu.h>
 
 void app_menu_callback(void* context, uint32_t index) {
     switch(index) {
