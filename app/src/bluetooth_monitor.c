@@ -28,5 +28,6 @@ void start_bluetooth_monitoring() {
     }
 
     ble_disconnect_device(keyboard);
+    FuriHalBle.deinit();
     furi_log("Bluetooth monitoring stopped.");
 }
