@@ -1,7 +1,8 @@
 #include <furi.h>
 #include <ble/ble.h>
 #include "keycode_mapper.h"
-#include "storage.h"
+#include "save_keystrokes.h"
+#include "bluetooth_monitor.h"
 
 void start_bluetooth_monitoring() {
     furi_log("Starting Bluetooth monitoring...");
