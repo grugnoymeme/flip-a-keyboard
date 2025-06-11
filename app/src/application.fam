@@ -1,0 +1,14 @@
+App(
+    appid="keylogger_gui",
+    name="Keylogger",
+    description="Keylogger USB/BLE con salvataggio su SD",
+    version="1.0.0",
+    author="babyboydaprince & 47lecoste",
+    entry_point="flipper_app_main",
+    fap_icon="A_Keylogger",
+    fap_category="Tools",
+    stack_size=4096,
+    heap_size=8192,
+    order=50,
+    requires=["gui", "input", "storage", "notification", "usb_hid"]
+)
