@@ -2,7 +2,7 @@
 #include <furi_hal.h>
 #include <storage/storage.h>
 #include <furi_log.h>
-#include "save_keystrokes.h"
+#include "include/save_keystrokes.h"
 
 void save_keystroke_to_storage(char character);
 
