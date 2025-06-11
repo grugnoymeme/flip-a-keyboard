@@ -8,5 +8,5 @@ char map_keycode_to_char(uint8_t* keycode) {
     } else if (keycode[0] == 39) {
         return '0'; // keycode 39 è 0
     }
-    return '?'; // carattere non riconosciuto
+    return '?';
 }
