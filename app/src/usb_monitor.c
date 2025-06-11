@@ -1,8 +1,8 @@
 #include <furi.h>
 #include <furi_hal.h>
-#include "keycode_mapper.h"
-#include "save_keystrokes.h"
-#include "usb_monitor.h"
+#include "include/keycode_mapper.h"
+#include "include/save_keystrokes.h"
+#include "include/usb_monitor.h"
 
 
 void start_usb_monitoring() {
