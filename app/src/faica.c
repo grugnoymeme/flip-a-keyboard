@@ -1,4 +1,4 @@
-#include "faica.h"
+#include "include/faica.h"
 #include <furi_hal.h>
 #include <storage/storage.h>
 #include <furi_log.h>
