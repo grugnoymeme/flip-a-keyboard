@@ -41,7 +41,7 @@ static void keylogger_input_callback(InputEvent* event, void* ctx) {
             if(event->key == InputKeyBack) {
                 usb_mode = false;
                 bluetooth_mode = false;
-                app.running = true; // torna al menu
+                app.running = true;
             }
             return;
         }
@@ -61,7 +61,7 @@ static void keylogger_input_callback(InputEvent* event, void* ctx) {
                     bluetooth_mode = true;
                     usb_mode = false;
                 } else {
-                    app.running = false; // Esci
+                    app.running = false;
                 }
                 break;
             case InputKeyBack:
@@ -86,7 +86,7 @@ static bool read_bluetooth_keycode(uint8_t* keycode_out) {
     static bool toggled = false;
     if(toggled) return false;
 
-    keycode_out[0] = 5; // codice 'b'
+    keycode_out[0] = 5;
     toggled = true;
     return true;
 }
